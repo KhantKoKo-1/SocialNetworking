@@ -1,0 +1,142 @@
+/* General Styles */
+body {
+    background-color: #f8f9fa;
+    color: #1132ec;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #18191a;
+    color: #e4e6eb;
+}
+
+.navbar.dark-mode {
+    background-color: #242526 !important;
+}
+
+.card {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card.post-card {
+    background-color: #ffffff;
+}
+
+body.dark-mode .card.post-card {
+    background-color: #242526;
+    color: #e4e6eb;
+}
+
+.reaction-bar {
+    margin-top: 10px;
+}
+
+.reaction-count {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Style the card and its elements */
+.card {
+    border-radius: 12px;
+    border: none;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the image preview container */
+#imagePreviewContainer img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#imagePreviewContainer img:hover {
+    transform: scale(1.05);
+}
+
+/* Post button */
+#postButton {
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+}
+
+
+/* Common grid styles */
+.facebook-grid {
+    display: grid;
+    gap: 5px;
+}
+
+/* Layout for 2 images: Big Big */
+.facebook-grid-2 {
+    grid-template-columns: 1fr 1fr; /* Two equally big images */
+    grid-template-rows: auto;      /* One row */
+}
+
+.facebook-grid-2 .grid-item {
+    grid-column: span 1; /* Each takes one column */
+}
+
+/* Layout for 3 images: Big Small Small */
+.facebook-grid-3 {
+    grid-template-columns: 2fr 1fr 1fr; /* Big image and two small ones */
+    grid-template-rows: auto auto;     /* Adjusts height dynamically */
+}
+
+.facebook-grid-3 .grid-item.big {
+    grid-column: span 2; /* Occupies two columns */
+    grid-row: span 2;    /* Occupies two rows */
+}
+
+.facebook-grid-3 .grid-item.small {
+    grid-column: span 1; /* Single column */
+    grid-row: span 1;    /* Single row */
+}
+
+/* Base styling for images */
+.facebook-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* See More overlay for extra images */
+.see-more-overlay {
+    position: absolute;
+    top: 51%;
+    left: 74.5%;
+    width: 24.2%;
+    height: 43%;
+    background: rgba(0, 0, 0, 0.6);
+    color: rgb(5, 42, 250);
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Truncate the content to 2 lines */
+.card-text.truncated {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 3rem; /* Adjust based on line height */
+}
+
+/* Style for the "See More" button */
+.see-more-btn {
+    font-size: 0.875rem; /* Adjust size */
+    color: #007bff; /* Match your theme color */
+    cursor: pointer;
+}
