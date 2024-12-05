@@ -31,7 +31,7 @@ body.dark-mode .card.post-card {
     margin-top: 10px;
 }
 
-.reaction-count {
+.reaction-count,.comment-count,.share-count  {
     font-size: 0.9rem;
     font-weight: bold;
 }
@@ -64,7 +64,6 @@ body.dark-mode .card.post-card {
     padding: 0.5rem 1.5rem;
     font-weight: bold;
 }
-
 
 /* Common grid styles */
 .facebook-grid {
@@ -109,10 +108,10 @@ body.dark-mode .card.post-card {
 /* See More overlay for extra images */
 .see-more-overlay {
     position: absolute;
-    top: 51%;
+    top: 50.5%;
     left: 74.5%;
     width: 24.2%;
-    height: 43%;
+    height: 41%;
     background: rgba(0, 0, 0, 0.6);
     color: rgb(5, 42, 250);
     font-size: 30px;
@@ -139,4 +138,88 @@ body.dark-mode .card.post-card {
     font-size: 0.875rem; /* Adjust size */
     color: #007bff; /* Match your theme color */
     cursor: pointer;
+}
+
+#sidebar .nav-link {
+    transition: background-color 0.3s;
+}
+#sidebar .nav-link:hover {
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+.list-group-item {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #646566; /* Light gray for hover effect */
+}
+
+.list-group-item a {
+    width: 100%; /* Ensures the entire list item is clickable */
+}
+
+
+/*==================================================
+  Nearby People CSS
+  ==================================================*/
+
+  .people-nearby .google-maps{
+    background: #f8f8f8;
+    border-radius: 4px;
+    border: 1px solid #f1f2f2;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .people-nearby .google-maps .map{
+    height: 300px;
+    width: 100%;
+    border: none;
+  }
+  
+  .people-nearby .nearby-user{
+    padding: 20px 0;
+    border-top: 1px solid #f1f2f2;
+    border-bottom: 1px solid #f1f2f2;
+    margin-bottom: 20px;
+  }
+  
+  img.profile-photo-lg{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+  }
+
+  .nav-item.active .nav-link {
+    background-color: #007bff; /* Highlight color */
+    color: white !important; /* Ensure text stays white */
+    border-radius: 5px;
+}
+
+  
+#comments {
+    display: none; /* Initially hide the comments section */
+}
+
+/* Display */
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text */
+}
+
+body.dark-mode a {
+    color: #bbbbbb; /* Slightly muted light color for links */
+}
+
+body.dark-mode .card {
+    background-color: #1e1e1e; /* Dark card background */
+    color: #ffffff; /* Light text inside cards */
+}
+
+body.dark-mode .form-check-input:checked {
+    background-color: #0d6efd; /* Accent color for toggles */
+    border-color: #0d6efd;
 }
